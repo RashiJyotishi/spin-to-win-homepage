@@ -18,6 +18,11 @@ const FeaturedGames: React.FC = () => {
       title: "Dice",
       description: "Roll the dice and predict the outcome for instant wins",
       imageUrl: "/placeholder.svg"
+    },
+    {
+      title: "Mines",
+      description: "Clear the field while avoiding hidden mines for big rewards",
+      imageUrl: "/placeholder.svg"
     }
   ];
 
@@ -28,7 +33,7 @@ const FeaturedGames: React.FC = () => {
         <a href="#" className="text-casino-purple hover:text-casino-purple/80 text-sm font-medium">View All Games →</a>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {games.map(game => (
           <GameCard 
             key={game.title}
