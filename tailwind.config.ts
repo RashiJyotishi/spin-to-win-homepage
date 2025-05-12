@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				casino: {
+					purple: '#8B5CF6',
+					blue: '#3B82F6',
+					green: '#10B981',
+					gold: '#F59E0B',
+					darkblue: '#111827',
+					darkpurple: '#1E1B2E'
 				}
 			},
 			borderRadius: {
@@ -70,25 +79,50 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '1',
+						boxShadow: '0 0 10px #8B5CF6, 0 0 20px rgba(139, 92, 246, 0.3)' 
 					},
-					to: {
-						height: '0'
-					}
+					'50%': { 
+						opacity: '0.7',
+						boxShadow: '0 0 15px #8B5CF6, 0 0 30px rgba(139, 92, 246, 0.5)' 
+					},
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'shine': {
+					'0%': { backgroundPosition: '200% 0' },
+					'100%': { backgroundPosition: '-200% 0' },
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s infinite ease-in-out',
+				'float': 'float 3s infinite ease-in-out',
+				'shine': 'shine 3s infinite linear',
+				'spin-slow': 'spin-slow 8s linear infinite',
+			},
+			backgroundImage: {
+				'hero-pattern': 'radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, rgba(30, 27, 46, 0) 70%)',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-casino': 'linear-gradient(135deg, #1E1B2E 0%, #111827 100%)',
+				'gradient-button': 'linear-gradient(90deg, #8B5CF6, #3B82F6, #8B5CF6)',
+				'card-shine': 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)',
 			}
 		}
 	},
