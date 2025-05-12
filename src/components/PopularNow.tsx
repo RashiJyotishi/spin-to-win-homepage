@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
-import { Dices, CircleArrowRight, Mines } from "lucide-react";
+import { Dices, CircleArrowRight, Grid } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PopularNow: React.FC = () => {
